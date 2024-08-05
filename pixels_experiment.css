@@ -1,0 +1,735 @@
+@use "sass:map";
+
+$w: #fff;
+$icons: (
+	(
+		"index": 1,
+		"pixels":
+			("x": 0.7, "y": 0.1)
+			("x": 0.8, "y": 0.1)
+			("x": 0.9, "y": 0.1)
+			("x": 1.0, "y": 0.1)
+			("x": 1.1, "y": 0.1)
+			("x": 1.2, "y": 0.1)
+			("x": 0.6, "y": 0.2)
+			("x": 1.3, "y": 0.2)
+			("x": 0.5, "y": 0.3)
+			("x": 1.4, "y": 0.3)
+			("x": 0.4, "y": 0.4)
+			("x": 0.7, "y": 0.4)
+			("x": 0.8, "y": 0.4)
+			("x": 1.5, "y": 0.4)
+			("x": 0.4, "y": 0.5)
+			("x": 0.5, "y": 0.5)
+			("x": 0.6, "y": 0.5)
+			("x": 0.9, "y": 0.5)
+			("x": 1.6, "y": 0.5)
+			("x": 0.1, "y": 0.6)
+			("x": 0.2, "y": 0.6)
+			("x": 0.3, "y": 0.6)
+			("x": 0.6, "y": 0.6)
+			("x": 0.7, "y": 0.6)
+			("x": 0.8, "y": 0.6)
+			("x": 0.9, "y": 0.6)
+			("x": 1.0, "y": 0.6)
+			("x": 1.1, "y": 0.6)
+			("x": 1.2, "y": 0.6)
+			("x": 1.3, "y": 0.6)
+			("x": 1.7, "y": 0.6)
+			("x": 1.8, "y": 0.6)
+			("x": 1.9, "y": 0.6)
+			("x": 2.0, "y": 0.6)
+			("x": 0.3, "y": 0.7)
+			("x": 0.7, "y": 0.7)
+			("x": 0.8, "y": 0.7)
+			("x": 1.8, "y": 0.7)
+			("x": 1.9, "y": 0.7)
+			("x": 2.0, "y": 0.7)
+			("x": 0.4, "y": 0.8)
+			("x": 1.8, "y": 0.8)
+			("x": 1.9, "y": 0.8)
+			("x": 2.0, "y": 0.8)
+			("x": 0.5, "y": 0.9)
+			("x": 1.8, "y": 0.9)
+			("x": 1.9, "y": 0.9)
+			("x": 2.0, "y": 0.9)
+			("x": 0.6, "y": 1.0)
+			("x": 0.7, "y": 1.0)
+			("x": 1.8, "y": 1.0)
+			("x": 1.9, "y": 1.0)
+			("x": 2.0, "y": 1.0)
+			("x": 0.8, "y": 1.1)
+			("x": 0.9, "y": 1.1)
+			("x": 1.0, "y": 1.1)
+			("x": 1.1, "y": 1.1)
+			("x": 1.2, "y": 1.1)
+			("x": 1.3, "y": 1.1)
+			("x": 1.4, "y": 1.1)
+			("x": 1.5, "y": 1.1)
+			("x": 1.8, "y": 1.1)
+			("x": 1.9, "y": 1.1)
+			("x": 2.0, "y": 1.1)
+			("x": 1.6, "y": 1.2)
+			("x": 1.7, "y": 1.2)
+			("x": 1.8, "y": 1.2)
+			("x": 1.9, "y": 1.2)
+			("x": 2.0, "y": 1.2)
+			("x": 1.8, "y": 1.3)
+			("x": 1.9, "y": 1.3)
+			("x": 2.0, "y": 1.3)
+			("x": 0.7, "y": 0.2, "color": $w)
+			("x": 0.8, "y": 0.2, "color": $w)
+			("x": 0.9, "y": 0.2, "color": $w)
+			("x": 1.0, "y": 0.2, "color": $w)
+			("x": 1.1, "y": 0.2, "color": $w)
+			("x": 1.2, "y": 0.2, "color": $w)
+			("x": 0.6, "y": 0.3, "color": $w)
+			("x": 0.7, "y": 0.3, "color": $w)
+			("x": 0.8, "y": 0.3, "color": $w)
+			("x": 0.9, "y": 0.3, "color": $w)
+			("x": 1.0, "y": 0.3, "color": $w)
+			("x": 1.1, "y": 0.3, "color": $w)
+			("x": 1.2, "y": 0.3, "color": $w)
+			("x": 1.3, "y": 0.3, "color": $w)
+			("x": 0.5, "y": 0.4, "color": $w)
+			("x": 0.6, "y": 0.4, "color": $w)
+			("x": 0.9, "y": 0.4, "color": $w)
+			("x": 1.0, "y": 0.4, "color": $w)
+			("x": 1.1, "y": 0.4, "color": $w)
+			("x": 1.2, "y": 0.4, "color": $w)
+			("x": 1.3, "y": 0.4, "color": $w)
+			("x": 1.4, "y": 0.4, "color": $w)
+			("x": 1.0, "y": 0.5, "color": $w)
+			("x": 1.1, "y": 0.5, "color": $w)
+			("x": 1.2, "y": 0.5, "color": $w)
+			("x": 1.3, "y": 0.5, "color": $w)
+			("x": 1.4, "y": 0.5, "color": $w)
+			("x": 1.5, "y": 0.5, "color": $w)
+			("x": 0.4, "y": 0.6, "color": $w)
+			("x": 0.5, "y": 0.6, "color": $w)
+			("x": 1.4, "y": 0.6, "color": $w)
+			("x": 1.5, "y": 0.6, "color": $w)
+			("x": 1.6, "y": 0.6, "color": $w)
+			("x": 0.4, "y": 0.7, "color": $w)
+			("x": 0.5, "y": 0.7, "color": $w)
+			("x": 0.6, "y": 0.7, "color": $w)
+			("x": 0.9, "y": 0.7, "color": $w)
+			("x": 1.0, "y": 0.7, "color": $w)
+			("x": 1.1, "y": 0.7, "color": $w)
+			("x": 1.2, "y": 0.7, "color": $w)
+			("x": 1.3, "y": 0.7, "color": $w)
+			("x": 1.4, "y": 0.7, "color": $w)
+			("x": 1.5, "y": 0.7, "color": $w)
+			("x": 1.6, "y": 0.7, "color": $w)
+			("x": 1.7, "y": 0.7, "color": $w)
+			("x": 0.5, "y": 0.8, "color": $w)
+			("x": 0.6, "y": 0.8, "color": $w)
+			("x": 0.7, "y": 0.8, "color": $w)
+			("x": 0.8, "y": 0.8, "color": $w)
+			("x": 0.9, "y": 0.8, "color": $w)
+			("x": 1.0, "y": 0.8, "color": $w)
+			("x": 1.1, "y": 0.8, "color": $w)
+			("x": 1.2, "y": 0.8, "color": $w)
+			("x": 1.3, "y": 0.8, "color": $w)
+			("x": 1.4, "y": 0.8, "color": $w)
+			("x": 1.5, "y": 0.8, "color": $w)
+			("x": 1.6, "y": 0.8, "color": $w)
+			("x": 1.7, "y": 0.8, "color": $w)
+			("x": 0.6, "y": 0.9, "color": $w)
+			("x": 0.7, "y": 0.9, "color": $w)
+			("x": 0.8, "y": 0.9, "color": $w)
+			("x": 0.9, "y": 0.9, "color": $w)
+			("x": 1.0, "y": 0.9, "color": $w)
+			("x": 1.1, "y": 0.9, "color": $w)
+			("x": 1.2, "y": 0.9, "color": $w)
+			("x": 1.3, "y": 0.9, "color": $w)
+			("x": 1.4, "y": 0.9, "color": $w)
+			("x": 1.5, "y": 0.9, "color": $w)
+			("x": 1.6, "y": 0.9, "color": $w)
+			("x": 1.7, "y": 0.9, "color": $w)
+			("x": 0.8, "y": 1.0, "color": $w)
+			("x": 0.9, "y": 1.0, "color": $w)
+			("x": 1.0, "y": 1.0, "color": $w)
+			("x": 1.1, "y": 1.0, "color": $w)
+			("x": 1.2, "y": 1.0, "color": $w)
+			("x": 1.3, "y": 1.0, "color": $w)
+			("x": 1.4, "y": 1.0, "color": $w)
+			("x": 1.5, "y": 1.0, "color": $w)
+			("x": 1.6, "y": 1.0, "color": $w)
+			("x": 1.7, "y": 1.0, "color": $w)
+			("x": 1.6, "y": 1.1, "color": $w)
+			("x": 1.7, "y": 1.1, "color": $w)
+		,
+		"lineCoords":
+			("x": 0.5, "y": 1.6)
+			("x": 0.9, "y": 1.2)
+			("x": 1.2, "y": 0.9)
+			("x": 0.6, "y": 1.8)
+			("x": 1.2, "y": 1.2)
+			("x": 1.5, "y": 0.9)
+			("x": 0.7, "y": 2.0)
+			("x": 1.2, "y": 1.5)
+			("x": 1.6, "y": 1.1)
+			("x": 0.9, "y": 2.1)
+			("x": 1.5, "y": 1.5)
+			("x": 1.0, "y": 2.3)
+			("x": 1.4, "y": 1.9)
+			("x": 1.8, "y": 1.5)
+			("x": 1.2, "y": 2.4)
+			("x": 1.8, "y": 1.8)
+			("x": 1.3, "y": 2.6)
+			("x": 1.6, "y": 2.3)
+			("x": 2.1, "y": 1.8)
+			("x": 1.5, "y": 2.7)
+			("x": 2.0, "y": 2.2)
+			("x": 2.4, "y": 1.8)
+			("x": 1.6, "y": 2.9)
+			("x": 2.0, "y": 2.5)
+			("x": 2.3, "y": 2.2)
+		,
+		"top": -0.7,
+		"left": -0.2,
+		"x": 1.3,
+		"y": 2,
+		"progressStart": 0.45,
+		"frames": 109,
+		"keyframes":
+			("frame":   0, "steps":  9, "x": 0.6, "y": 1.5)
+			("frame":   9, "steps":  1, "x": 1.5, "y": 0.6)
+			("frame":  10, "steps":  1, "x": 1.1, "y": 1.2)
+			("frame":  11, "steps": 10, "x": 0.7, "y": 1.7)
+			("frame":  21, "steps":  1, "x": 1.7, "y": 0.7)
+			("frame":  22, "steps":  1, "x": 1.2, "y": 1.3)
+			("frame":  23, "steps": 10, "x": 0.8, "y": 1.9)
+			("frame":  33, "steps":  1, "x": 1.8, "y": 0.9)
+			("frame":  34, "steps":  1, "x": 1.4, "y": 1.5)
+			("frame":  35, "steps": 10, "x": 1.0, "y": 2.0)
+			("frame":  45, "steps":  1, "x": 2.0, "y": 1.0)
+			("frame":  46, "steps":  1, "x": 1.5, "y": 1.6)
+			("frame":  47, "steps": 10, "x": 1.1, "y": 2.2)
+			("frame":  57, "steps":  1, "x": 2.1, "y": 1.2)
+			("frame":  58, "steps":  1, "x": 1.7, "y": 1.8)
+			("frame":  59, "steps": 10, "x": 1.3, "y": 2.3)
+			("frame":  69, "steps":  1, "x": 2.3, "y": 1.3)
+			("frame":  70, "steps":  1, "x": 1.8, "y": 1.9)
+			("frame":  71, "steps": 10, "x": 1.4, "y": 2.5)
+			("frame":  81, "steps":  1, "x": 2.4, "y": 1.5)
+			("frame":  82, "steps":  1, "x": 2.0, "y": 2.1)
+			("frame":  83, "steps": 10, "x": 1.6, "y": 2.6)
+			("frame":  93, "steps":  1, "x": 2.6, "y": 1.6)
+			("frame":  94, "steps":  1, "x": 2.1, "y": 2.2)
+			("frame":  95, "steps": 10, "x": 1.7, "y": 2.8)
+			("frame": 105, "steps":  1, "x": 2.7, "y": 1.8)
+			("frame": 106, "steps":  1, "x": 2.1, "y": 1.7)
+			("frame": 107, "steps":  1, "x": 1.6, "y": 1.6)
+			("frame": 108, "steps":  1, "x": 1.1, "y": 1.6)
+			("frame": 109, "steps":  9, "x": 0.6, "y": 1.5)
+		,
+		"lineKeyframes":
+			("frame":   1, "length": 3)
+			("frame":   5, "length": 2)
+			("frame":   8, "length": 3)
+			("frame":  12, "length": 5)
+			("frame":  18, "length": 2)
+			("frame":  21, "length": 2)
+			("frame":  24, "length": 4)
+			("frame":  29, "length": 3)
+			("frame":  33, "length": 2)
+			("frame":  36, "length": 5)
+			("frame":  42, "length": 5)
+			("frame":  48, "length": 3)
+			("frame":  52, "length": 3)
+			("frame":  56, "length": 3)
+			("frame":  60, "length": 5)
+			("frame":  66, "length": 5)
+			("frame":  72, "length": 2)
+			("frame":  75, "length": 4)
+			("frame":  80, "length": 3)
+			("frame":  84, "length": 4)
+			("frame":  89, "length": 3)
+			("frame":  93, "length": 2)
+			("frame":  96, "length": 3)
+			("frame": 100, "length": 2)
+			("frame": 103, "length": 4)
+	)
+	(
+		"index": 2,
+		"pixels":
+			("x": 1.2, "y": 0.1)
+			("x": 1.3, "y": 0.1)
+			("x": 1.4, "y": 0.1)
+			("x": 1.1, "y": 0.2)
+			("x": 1.5, "y": 0.2)
+			("x": 1.0, "y": 0.3)
+			("x": 1.6, "y": 0.3)
+			("x": 0.9, "y": 0.4)
+			("x": 1.1, "y": 0.4)
+			("x": 1.6, "y": 0.4)
+			("x": 0.8, "y": 0.5)
+			("x": 1.0, "y": 0.5)
+			("x": 1.2, "y": 0.5)
+			("x": 1.6, "y": 0.5)
+			("x": 0.7, "y": 0.6)
+			("x": 0.9, "y": 0.6)
+			("x": 1.1, "y": 0.6)
+			("x": 1.3, "y": 0.6)
+			("x": 1.5, "y": 0.6)
+			("x": 0.6, "y": 0.7)
+			("x": 0.8, "y": 0.7)
+			("x": 1.0, "y": 0.7)
+			("x": 1.2, "y": 0.7)
+			("x": 1.4, "y": 0.7)
+			("x": 0.5, "y": 0.8)
+			("x": 0.7, "y": 0.8)
+			("x": 0.9, "y": 0.8)
+			("x": 1.1, "y": 0.8)
+			("x": 1.3, "y": 0.8)
+			("x": 0.4, "y": 0.9)
+			("x": 0.6, "y": 0.9)
+			("x": 0.8, "y": 0.9)
+			("x": 1.0, "y": 0.9)
+			("x": 1.2, "y": 0.9)
+			("x": 0.3, "y": 1.0)
+			("x": 0.5, "y": 1.0)
+			("x": 0.7, "y": 1.0)
+			("x": 0.9, "y": 1.0)
+			("x": 1.1, "y": 1.0)
+			("x": 0.2, "y": 1.1)
+			("x": 0.4, "y": 1.1)
+			("x": 0.6, "y": 1.1)
+			("x": 0.8, "y": 1.1)
+			("x": 1.0, "y": 1.1)
+			("x": 0.1, "y": 1.2)
+			("x": 0.3, "y": 1.2)
+			("x": 0.5, "y": 1.2)
+			("x": 0.7, "y": 1.2)
+			("x": 0.9, "y": 1.2)
+			("x": 0.1, "y": 1.3)
+			("x": 0.4, "y": 1.3)
+			("x": 0.6, "y": 1.3)
+			("x": 0.8, "y": 1.3)
+			("x": 0.1, "y": 1.4)
+			("x": 0.2, "y": 1.4)
+			("x": 0.5, "y": 1.4)
+			("x": 0.7, "y": 1.4)
+			("x": 0.1, "y": 1.5)
+			("x": 0.2, "y": 1.5)
+			("x": 0.3, "y": 1.5)
+			("x": 0.6, "y": 1.5)
+			("x": 0.1, "y": 1.6)
+			("x": 0.2, "y": 1.6)
+			("x": 0.3, "y": 1.6)
+			("x": 0.4, "y": 1.6)
+			("x": 0.5, "y": 1.6)
+			("x": 1.2, "y": 0.6, "color": $w)
+			("x": 1.0, "y": 0.6, "color": $w)
+			("x": 0.8, "y": 0.6, "color": $w)
+			("x": 1.3, "y": 0.5, "color": $w)
+			("x": 1.4, "y": 0.5, "color": $w)
+			("x": 1.5, "y": 0.5, "color": $w)
+			("x": 1.1, "y": 0.5, "color": $w)
+			("x": 0.9, "y": 0.5, "color": $w)
+			("x": 1.2, "y": 0.2, "color": $w)
+			("x": 1.3, "y": 0.2, "color": $w)
+			("x": 1.4, "y": 0.2, "color": $w)
+			("x": 1.1, "y": 0.3, "color": $w)
+			("x": 1.2, "y": 0.3, "color": $w)
+			("x": 1.3, "y": 0.3, "color": $w)
+			("x": 1.4, "y": 0.3, "color": $w)
+			("x": 1.5, "y": 0.3, "color": $w)
+			("x": 1.0, "y": 0.4, "color": $w)
+			("x": 1.2, "y": 0.4, "color": $w)
+			("x": 1.3, "y": 0.4, "color": $w)
+			("x": 1.4, "y": 0.4, "color": $w)
+			("x": 1.5, "y": 0.4, "color": $w)
+			("x": 1.4, "y": 0.6, "color": $w)
+			("x": 0.7, "y": 0.7, "color": $w)
+			("x": 0.9, "y": 0.7, "color": $w)
+			("x": 1.1, "y": 0.7, "color": $w)
+			("x": 1.3, "y": 0.7, "color": $w)
+			("x": 0.6, "y": 0.8, "color": $w)
+			("x": 0.8, "y": 0.8, "color": $w)
+			("x": 1.0, "y": 0.8, "color": $w)
+			("x": 1.2, "y": 0.8, "color": $w)
+			("x": 0.5, "y": 0.9, "color": $w)
+			("x": 0.7, "y": 0.9, "color": $w)
+			("x": 0.9, "y": 0.9, "color": $w)
+			("x": 1.1, "y": 0.9, "color": $w)
+			("x": 0.4, "y": 1.0, "color": $w)
+			("x": 0.6, "y": 1.0, "color": $w)
+			("x": 0.8, "y": 1.0, "color": $w)
+			("x": 1.0, "y": 1.0, "color": $w)
+			("x": 0.3, "y": 1.1, "color": $w)
+			("x": 0.5, "y": 1.1, "color": $w)
+			("x": 0.7, "y": 1.1, "color": $w)
+			("x": 0.9, "y": 1.1, "color": $w)
+			("x": 0.2, "y": 1.2, "color": $w)
+			("x": 0.4, "y": 1.2, "color": $w)
+			("x": 0.6, "y": 1.2, "color": $w)
+			("x": 0.8, "y": 1.2, "color": $w)
+			("x": 0.2, "y": 1.3, "color": $w)
+			("x": 0.3, "y": 1.3, "color": $w)
+			("x": 0.5, "y": 1.3, "color": $w)
+			("x": 0.7, "y": 1.3, "color": $w)
+			("x": 0.3, "y": 1.4, "color": $w)
+			("x": 0.4, "y": 1.4, "color": $w)
+			("x": 0.6, "y": 1.4, "color": $w)
+			("x": 0.4, "y": 1.5, "color": $w)
+			("x": 0.5, "y": 1.5, "color": $w)
+		,
+		"lineCoords":
+			("x": 0.5, "y": 1.7)
+			("x": 1.0, "y": 1.2)
+			("x": 0.7, "y": 1.9)
+			("x": 1.1, "y": 1.5)
+			("x": 1.4, "y": 1.2)
+			("x": 0.9, "y": 2.1)
+			("x": 1.7, "y": 1.3)
+			("x": 1.1, "y": 2.3)
+			("x": 1.6, "y": 1.8)
+			("x": 2.0, "y": 1.4)
+			("x": 1.3, "y": 2.5)
+			("x": 2.0, "y": 1.8)
+			("x": 1.5, "y": 2.7)
+			("x": 1.9, "y": 2.3)
+		,
+		"top": -1.7,
+		"left": -0.2,
+		"x": 1.7,
+		"y": 2,
+		"progressStart": 0.507,
+		"frames": 77,
+		"keyframes":
+			("frame":  0, "steps": 10, "x": 0.6, "y": 1.6)
+			("frame": 10, "steps":  1, "x": 1.6, "y": 0.6)
+			("frame": 11, "steps":  1, "x": 1.2, "y": 1.2)
+			("frame": 12, "steps": 10, "x": 0.8, "y": 1.8)
+			("frame": 22, "steps":  1, "x": 1.8, "y": 0.8)
+			("frame": 23, "steps":  1, "x": 1.4, "y": 1.4)
+			("frame": 24, "steps": 10, "x": 1.0, "y": 2.0)
+			("frame": 34, "steps":  1, "x": 2.0, "y": 1.0)
+			("frame": 35, "steps":  1, "x": 1.8, "y": 1.5)
+			("frame": 36, "steps":  1, "x": 1.7, "y": 2.0)
+			("frame": 39, "steps":  1, "x": 1.7, "y": 2.0)
+			("frame": 40, "steps":  1, "x": 1.4, "y": 2.1)
+			("frame": 41, "steps": 10, "x": 1.2, "y": 2.2)
+			("frame": 51, "steps":  1, "x": 2.2, "y": 1.2)
+			("frame": 52, "steps":  1, "x": 1.8, "y": 1.8)
+			("frame": 53, "steps": 10, "x": 1.4, "y": 2.4)
+			("frame": 63, "steps":  1, "x": 2.4, "y": 1.4)
+			("frame": 64, "steps":  1, "x": 2.0, "y": 2.0)
+			("frame": 65, "steps": 10, "x": 1.6, "y": 2.6)
+			("frame": 75, "steps":  1, "x": 2.6, "y": 1.6)
+			("frame": 76, "steps":  1, "x": 1.6, "y": 1.6)
+			("frame": 77, "steps": 10, "x": 0.6, "y": 1.6)
+		,
+		"lineKeyframes":
+			("frame":  0, "length": 4)
+			("frame":  5, "length": 6)
+			("frame": 12, "length": 3)
+			("frame": 16, "length": 2)
+			("frame": 19, "length": 4)
+			("frame": 24, "length": 7)
+			("frame": 32, "length": 3)
+			("frame": 41, "length": 4)
+			("frame": 46, "length": 3)
+			("frame": 50, "length": 2)
+			("frame": 53, "length": 6)
+			("frame": 60, "length": 4)
+			("frame": 65, "length": 3)
+			("frame": 69, "length": 7)
+	)
+);
+
+// mixins
+@mixin debug() {
+	$debug: false;
+
+	@if $debug == true {
+		outline: 1px solid #f00;
+	}
+}
+@mixin lineLength($lineLength,$frameStart,$percent) {
+	$shadows: ();
+	$shadow: 0.1em -0.1em 0;
+	$shadows: append($shadows,$shadow,comma);
+
+	from {
+		box-shadow: $shadows;
+		visibility: hidden;
+	}
+	@if $lineLength > 1 {
+		@for $l from 1 through $lineLength {
+			$keyframePercent: ($frameStart + ($l - 1)) * $percent;
+
+			@if $l < $lineLength {
+				#{$keyframePercent} {
+					box-shadow: $shadows;
+					visibility: visible;
+				}
+			} @else {
+				#{$keyframePercent},
+				to {
+					box-shadow: $shadows;
+				}
+			}
+			$shadow: ((0.1em * ($l + 1)) (-0.1em * ($l + 1)) 0);
+			$shadows: append($shadows,$shadow,comma);
+		}
+	} @else {
+		to {
+			box-shadow: $shadows;
+			visibility: visible;
+		}
+	}
+}
+@mixin movingSprite($icon) {
+	$index: map.get($icon,"index");
+	$sprite: ();
+	$spritePixels: map.get($icon,"pixels");
+	$top: map.get($icon,"top");
+	$left: map.get($icon,"left");
+	$transX: map.get($icon,"x");
+	$transY: map.get($icon,"y");
+	$progressStart: map.get($icon,"progressStart");
+
+	@each $pixel in $spritePixels {
+		$x: map.get($pixel,"x");
+		$y: map.get($pixel,"y");
+		$color: map.get($pixel,"color");
+		$shadow: (1em * $x) (1em * $y) 0 $color;
+		$sprite: append($sprite,$shadow,comma);
+	}
+	animation: {
+		name: icon#{$index};
+		delay: calc(var(--dur) * -#{$progressStart});
+	};
+	box-shadow: $sprite;
+	top: 1em * $top;
+	left: 1em * $left;
+	transform: translate(1em * $transX,1em * $transY);
+}
+@mixin paperSprite() {
+	$sprite: ();
+	$spritePixels:
+		("x": 1.6, "y": 0.1)
+		("x": 1.5, "y": 0.2)
+		("x": 1.7, "y": 0.2)
+		("x": 1.4, "y": 0.3)
+		("x": 1.8, "y": 0.3)
+		("x": 1.3, "y": 0.4)
+		("x": 1.9, "y": 0.4)
+		("x": 1.2, "y": 0.5)
+		("x": 2.0, "y": 0.5)
+		("x": 1.1, "y": 0.6)
+		("x": 2.1, "y": 0.6)
+		("x": 1.0, "y": 0.7)
+		("x": 2.2, "y": 0.7)
+		("x": 0.9, "y": 0.8)
+		("x": 2.3, "y": 0.8)
+		("x": 0.8, "y": 0.9)
+		("x": 2.4, "y": 0.9)
+		("x": 0.7, "y": 1.0)
+		("x": 2.5, "y": 1.0)
+		("x": 0.6, "y": 1.1)
+		("x": 2.6, "y": 1.1)
+		("x": 0.5, "y": 1.2)
+		("x": 2.7, "y": 1.2)
+		("x": 0.4, "y": 1.3)
+		("x": 2.8, "y": 1.3)
+		("x": 0.3, "y": 1.4)
+		("x": 2.9, "y": 1.4)
+		("x": 0.2, "y": 1.5)
+		("x": 3.0, "y": 1.5)
+		("x": 0.1, "y": 1.6)
+		("x": 3.1, "y": 1.6)
+		("x": 0.2, "y": 1.7)
+		("x": 3.2, "y": 1.7)
+		("x": 0.3, "y": 1.8)
+		("x": 3.1, "y": 1.8)
+		("x": 0.4, "y": 1.9)
+		("x": 3.0, "y": 1.9)
+		("x": 0.5, "y": 2.0)
+		("x": 2.9, "y": 2.0)
+		("x": 0.6, "y": 2.1)
+		("x": 2.8, "y": 2.1)
+		("x": 0.7, "y": 2.2)
+		("x": 2.7, "y": 2.2)
+		("x": 0.8, "y": 2.3)
+		("x": 2.6, "y": 2.3)
+		("x": 0.9, "y": 2.4)
+		("x": 2.5, "y": 2.4)
+		("x": 1.0, "y": 2.5)
+		("x": 2.4, "y": 2.5)
+		("x": 1.1, "y": 2.6)
+		("x": 2.3, "y": 2.6)
+		("x": 1.2, "y": 2.7)
+		("x": 2.2, "y": 2.7)
+		("x": 1.3, "y": 2.8)
+		("x": 2.1, "y": 2.8)
+		("x": 1.4, "y": 2.9)
+		("x": 2.0, "y": 2.9)
+		("x": 1.5, "y": 3.0)
+		("x": 1.9, "y": 3.0)
+		("x": 1.6, "y": 3.1)
+		("x": 1.8, "y": 3.1)
+		("x": 1.7, "y": 3.2);
+
+	@each $pixel in $spritePixels {
+		$x: map.get($pixel,"x");
+		$y: map.get($pixel,"y");
+		$shadow: (1em * $x) (1em * $y) 0;
+		$sprite: append($sprite,$shadow,comma);
+	}
+	box-shadow: $sprite;
+}
+@mixin stepsTransform($steps,$x,$y) {
+	animation-timing-function: steps($steps);
+	transform: translate(1em * $x,1em * $y);
+}
+
+// normal CSS
+* {
+	border: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+:root {
+	--bg: hsl(0,0%,100%);
+	--fg: hsl(0,0%,0%);
+	font-size: 30px;
+}
+body {
+	background-color: var(--bg);
+	color: var(--fg);
+	display: flex;
+	font: 1em/1.5 sans-serif;
+	height: 100vh;
+}
+main {
+	display: flex;
+	gap: 0.75em;
+	margin: auto;
+}
+.icon {
+	--dur: 8s;
+	@include debug();
+	overflow: hidden;
+	position: relative;
+	width: 3.2em;
+	height: 3.2em;
+
+	&:before,
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: -0.1em;
+		left: -0.1em;
+		height: 0.1em;
+		width: 0.1em;
+	}
+	&:before {
+		@include paperSprite();
+	}
+	&:after {
+		z-index: 1;
+	}
+	&__line,
+	&:after {
+		animation: {
+			duration: var(--dur);
+			timing-function: steps(1);
+			iteration-count: infinite;
+			// play-state: paused;
+		};
+	}
+	&__line {
+		@include debug();
+		position: absolute;
+		top: -0.1em;
+		left: -0.1em;
+		width: 0.1em;
+		height: 0.1em;
+	}
+
+	@each $icon in $icons {
+		$index: map.get($icon,"index");
+		$progressStart: map.get($icon,"progressStart");
+		$coordSet: map.get($icon,"lineCoords");
+
+		// moving part that writes lines on the paper
+		&--#{$index} {
+			&:after {
+				@include movingSprite($icon);
+			}
+		}
+		// line animations and positions
+		&--#{$index} &__line {
+			animation-delay: calc(var(--dur) * -#{$progressStart});
+
+			@for $p from 1 through length($coordSet) {
+				// when animating, start at line 13 for icon 1, line 8 for icon 2
+				$pair: nth($coordSet,$p);
+				$x: map.get($pair,"x");
+				$y: map.get($pair,"y");
+
+				&:nth-child(#{$p}) {
+					animation-name: icon#{$index}-line#{$p};
+					transform: translate(1em * $x,1em * $y);
+				}
+			}
+		}
+	}
+}
+
+/* Beyond mobile */
+@media (min-width: 768px) {
+	:root {
+		font-size: 40px;
+	}
+}
+@media (min-width: 1280px) {
+	:root {
+		font-size: 50px;
+	}
+}
+@media (min-width: 1600px) {
+	:root {
+		font-size: 60px;
+	}
+}
+
+/* Animations */
+@each $icon in $icons {
+	$index: map.get($icon,"index");
+	$frames: map.get($icon,"frames");
+	$percentFrac: (100% / $frames);
+	$keyframes: map.get($icon,"keyframes");
+	$lineKeyframes: map.get($icon,"lineKeyframes");
+
+	// moving part
+	@keyframes icon#{$index} {
+		@each $keyframe in $keyframes {
+			$frame: map.get($keyframe,"frame");
+			$steps: map.get($keyframe,"steps");
+			$x: map.get($keyframe,"x");
+			$y: map.get($keyframe,"y");
+
+			#{$frame * $percentFrac} {
+				@include stepsTransform($steps,$x,$y);
+			}
+		}
+	}
+	// lines
+	@for $l from 1 through length($lineKeyframes) {
+		$line: nth($lineKeyframes,$l);
+		$frameStart: map.get($line,"frame");
+		$lineLength: map.get($line,"length");
+
+		@keyframes icon#{$index}-line#{$l} {
+			@include lineLength($lineLength,$frameStart,$percentFrac);
+		}
+	}
+}
